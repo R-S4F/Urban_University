@@ -1,6 +1,7 @@
 # Домашняя работа по уроку "Способы вызова функции"
 
 def checker(email):
+    
     domains_for_check = ('.com', '.ru', '.net')
     check = False
     if email == 'university.help@gmail.com':
