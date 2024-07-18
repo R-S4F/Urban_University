@@ -4,7 +4,7 @@ def checker(email):
     domains_for_check = ('com', 'ru', 'net')
     if email == 'university.help@gmail.com':
         return True
-    elif (email.split('.')[-1] in domains_for_check) and '@' in email:
+    elif (email.split('.')[-1] in domains_for_check) and ('@' in email):
         return True
     return False
 
