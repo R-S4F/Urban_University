@@ -10,4 +10,9 @@ class House:
             for i in range(1, new_floor + 1):
                 print(i)
 
+    def __len__(self):
+        return self.number_of_floors
 
+    def __str__(self):
+        a = f"Название: {self.name}, кол-во этажей: {self.number_of_floors}"
+        return a

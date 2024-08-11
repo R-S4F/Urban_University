@@ -1,4 +1,4 @@
-from House import *
+from Module_5.Lib.House import *
 
 
 h1 = House('ЖК Горский', 18)
