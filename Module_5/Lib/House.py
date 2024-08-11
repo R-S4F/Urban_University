@@ -11,29 +11,41 @@ class House:
             for i in range(1, new_floor + 1):
                 print(i)
 
+
+
+
     def __len__(self):
         return self.number_of_floors
 
     def __str__(self):
         return f"Название: {self.name}, кол-во этажей: {self.number_of_floors}"
 
+    def checkin(self, other):
+        return isinstance(other, House) and isinstance(other.number_of_floors, int)
+
     def __eq__(self, other):
-        return self.number_of_floors == other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors == other.number_of_floors
 
     def __lt__(self, other):
-        return self.number_of_floors < other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
-        return self.number_of_floors <= other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors <= other.number_of_floors
 
     def __gt__(self, other):
-        return self.number_of_floors > other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors > other.number_of_floors
 
     def __ge__(self, other):
-        return self.number_of_floors >= other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors >= other.number_of_floors
 
     def __ne__(self, other):
-        return self.number_of_floors != other.number_of_floors
+        if self.checkin(other):
+            return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
         self.number_of_floors += value
