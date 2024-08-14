@@ -32,8 +32,6 @@ class UrTube:
             videos = []
         if users is None:
             users = []
-        if users is None:
-            users = []
         self.users = users
         self.videos = videos
         self.current_user = current_user
