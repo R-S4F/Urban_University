@@ -6,7 +6,7 @@ def is_exist(list_, string_, dict_key):
     for i in list_:
         if string_ == i.__dict__.get(dict_key):
             checker = True
-            return checker
+            break
 
     return checker
 
