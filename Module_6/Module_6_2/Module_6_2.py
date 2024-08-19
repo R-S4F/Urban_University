@@ -43,6 +43,10 @@ class Vehicle:
 class Sedan(Vehicle):
     def __init__(self, owner, model, engine_power, color):
         super().__init__(owner, model, engine_power, color)
+        self.__PASSENGERS_LIMIT = 5
+
+    def get_passengers_limit(self):
+        return self.__PASSENGERS_LIMIT
 
 
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 500, 'blue')
@@ -54,4 +58,5 @@ vehicle1.owner = 'Vasyok'
 
 
 vehicle1.print_info()
+
 
