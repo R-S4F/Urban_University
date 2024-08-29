@@ -49,7 +49,6 @@ class Figure:
             return True
 
 
-
 class Circle(Figure):
     SIDES_COUNT = 1
 
