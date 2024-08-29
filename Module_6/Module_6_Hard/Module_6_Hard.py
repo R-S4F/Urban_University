@@ -47,8 +47,7 @@ class Figure:
                 if not ((i > 0) and isinstance(i, int)):
                     return False
             return True
-        else:
-            return False
+
 
 
 class Circle(Figure):
@@ -57,7 +56,7 @@ class Circle(Figure):
     def __init__(self, color, *sides):
         from math import pi
         super().__init__(color, *sides)
-        self.__radius = self.get_sides()[0] / (2 * pi)
+        self.__radius = self.__len__() / (2 * pi)
 
     def get_square(self):
         from math import pi
