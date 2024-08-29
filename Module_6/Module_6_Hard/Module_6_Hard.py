@@ -6,7 +6,6 @@ class Figure:
 
     def __init__(self, color, *sides):
 
-        self.__color = None
         if self.__is_valid_color(*color):
             self.set_color(*color)
 
@@ -16,6 +15,23 @@ class Figure:
             self.__sides = [1] * self.SIDES_COUNT
 
         self.filled = bool()
+
+    def get_sides(self):
+        return self.__sides
+
+    def get_color(self):
+        return self.__color
+
+    def __len__(self):
+        return sum(self.__sides)
+
+    def set_color(self, r, g, b):
+        if self.__is_valid_color(r, g, b):
+            self.__color = [r, g, b]
+
+    def set_sides(self, *new_sides):
+        if self.__is_valid_sides(*new_sides):
+            self.__sides = [*new_sides]
 
     @staticmethod
     def __is_valid_color(r, g, b):
@@ -31,23 +47,6 @@ class Figure:
             return True
         else:
             return False
-
-    def set_color(self, r, g, b):
-        if self.__is_valid_color(r, g, b):
-            self.__color = [r, g, b]
-
-    def get_sides(self):
-        return self.__sides
-
-    def get_color(self):
-        return self.__color
-
-    def __len__(self):
-        return sum(self.__sides)
-
-    def set_sides(self, *new_sides):
-        if self.__is_valid_sides(*new_sides):
-            self.__sides = [*new_sides]
 
 
 class Circle(Figure):
@@ -81,7 +80,6 @@ class Cube(Figure):
     def __init__(self, color, *sides):
         super().__init__(color, *sides)
         self.set_sides(*([sides][0] * 12))
-
 
     def get_volume(self):
         return self.get_sides()[0] ** 3
