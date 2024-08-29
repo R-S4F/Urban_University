@@ -9,7 +9,7 @@ class Figure:
         if self.__is_valid_color(*color):
             self.__color = [*color]
 
-        if len(sides) == self.SIDES_COUNT:
+        if self.__is_valid_sides(*sides):
             self.set_sides(*sides)
         else:
             self.__sides = [1] * self.SIDES_COUNT
