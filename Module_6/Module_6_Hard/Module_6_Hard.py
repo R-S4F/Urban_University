@@ -8,6 +8,8 @@ class Figure:
 
         if self.__is_valid_color(*color):
             self.__color = [*color]
+        else:
+            self.__color = [0,0,0]
 
         if self.__is_valid_sides(*sides):
             self.set_sides(*sides)
