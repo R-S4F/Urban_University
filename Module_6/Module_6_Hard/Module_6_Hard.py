@@ -7,7 +7,7 @@ class Figure:
     def __init__(self, color, *sides):
 
         if self.__is_valid_color(*color):
-            self.set_color(*color)
+            self.__color = [*color]
 
         if len(sides) == self.SIDES_COUNT:
             self.set_sides(*sides)
