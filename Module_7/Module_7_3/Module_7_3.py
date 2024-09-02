@@ -16,7 +16,7 @@ class WordsFinder:
         return all_words
 
     def print_words_from(self, file_name):
-        print(f'{file_name}: {self.get_all_words().get(file_name)}')
+        print({file_name: self.get_all_words().get(file_name)})
 
     def find(self, word):
         for name, words in self.get_all_words().items():
