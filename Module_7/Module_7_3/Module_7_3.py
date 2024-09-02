@@ -12,8 +12,8 @@ class WordsFinder:
                 continue
             with open(str(_file), 'r+', encoding='utf-8') as file:
                 _str = str(file.read()).lower()
-                for un in unnecessary:
-                    _str.replace(un, ' ')
+                for i in unnecessary:
+                    _str.replace(i, ' ')
                 all_words[_file] = _str.split()
         return all_words
 
