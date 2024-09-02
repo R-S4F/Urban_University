@@ -8,6 +8,8 @@ class WordsFinder:
         unnecessary = [',', '.', '=', '!', '?', ';', ':', ' - ']
         all_words = dict()
         for _file in self.file_names:
+            if not isinstance(_file, str):
+                continue
             with open(str(_file), 'r+', encoding='utf-8') as file:
                 _str = str(file.read()).lower()
                 for un in unnecessary:
