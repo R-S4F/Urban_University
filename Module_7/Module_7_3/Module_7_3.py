@@ -34,4 +34,5 @@ print(finder2.get_all_words())  # Все слова
 finder2.print_words_from('test2.txt')
 print(finder2.find('TEXT'))  # 3 слово по счёту
 print(finder2.count('teXT'))  # 4 слова teXT в тексте всего
+print(finder2.find('свинья'))
 print(finder2.count('свинья'))
