@@ -76,13 +76,13 @@ class Challenge:
             ls[j + 1] = key
         return ls[::-1]
 
-    def remove_losers(self, ls, ind=1):
+    def remove_losers(self, ls, ind=1, step=-1):
         ls = self.insertion_sort(ls, ind)
-        if ls[-1][ind] != ls[0][ind]:
-            ls.pop(-1)
+        if ls[step][ind] != ls[step+1][ind]:
+            ls.pop(step)
             return self.remove_losers(ls, ind)
         if len(ls) > 1 and ls[0][2] != ls[1][2]:
-            ls = self.remove_losers(ls, 2)
+            ls = self.remove_losers(ls, 2, 0)
         return ls
 
     def print_team_count(self, index):

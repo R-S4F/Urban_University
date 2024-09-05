@@ -1,9 +1,4 @@
-def bubble_sort(ls):
-    for i in range(len(ls) - 1, 0, 1):
-        for j in range(i):
-            if ls[j] > ls[j + 1]:
-                ls[j], ls[j + 1] = ls[j + 1], ls[j]
-    return ls
+
 
 
 def selection_sort(ls):
@@ -25,3 +20,6 @@ def insertion_sort(ls):
             j -= 1
         ls[j + 1] = key
     return ls
+
+_list = [1,547,32,12,4,9,3,2]
+print(insertion_sort(_list))
