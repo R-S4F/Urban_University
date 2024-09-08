@@ -15,7 +15,8 @@ def personal_sum(numbers):
 
 def calculate_average(numbers):
     try:
-        return personal_sum(numbers)[0]/(len(numbers)-personal_sum(numbers)[1])
+        _tuple = personal_sum(numbers)
+        return _tuple[0]/(len(numbers)-_tuple[1])
     except ZeroDivisionError:
         return 0
     except TypeError as exp:
