@@ -3,11 +3,11 @@
 def password(w):
     result = str()
     for i in range(1, w):
-        for k in range(i+1, n):
+        for k in range(i+1, w):
             dual = i + k
             if w >= dual and w % dual == 0:
                 result += str(i) + str(k)
-    return(result)
+    return result
 
 while True:
     n = int(input('Введите число из первого поля: '))
