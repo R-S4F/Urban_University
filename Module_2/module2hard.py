@@ -9,6 +9,7 @@ def password(w):
                 result += str(i) + str(k)
     return result
 
+
 while True:
     n = int(input('Введите число из первого поля: '))
     if n < 3 or n > 20:
