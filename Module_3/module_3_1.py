@@ -25,6 +25,17 @@ def is_contains(string, list_to_search):
     count_calls()
     return checker
 
+# def is_contains(_string, list_to_search):
+#     _string = _string.upper()
+#     for i in list_to_search:
+#         if i.upper() in _string:
+#             count_calls()
+#             return True
+#     count_calls()
+#     return False
+
+
+
 
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
