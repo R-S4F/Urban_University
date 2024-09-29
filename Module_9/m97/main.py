@@ -8,7 +8,7 @@ def is_prime(func):
             return _res
         else:
             xyz = 0
-            for _ in range(int(_res**0.5)+1):
+            for _ in range(int(_res ** 0.5) + 1):
                 for i in (3, 5, 7, 11):
                     if _res % (i + xyz) == 0 and _res > (i + xyz):
                         print('Составное')
