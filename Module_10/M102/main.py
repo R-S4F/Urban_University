@@ -21,12 +21,12 @@ class Knight(Thread):
         alies = 100
         days = 0
         while alies > 0:
-            sleep(1)
             if alies <= self.power:
                 alies = 0
             else:
                 alies -= self.power
             days += 1
+            sleep(1)
             print(f"{self.name} сражается {self.some_title(days, days_title)},"
                   f" осталось {self.some_title(alies, alies_title)}.")
         print(f'{self.name} одержал победу спустя {self.some_title(days, days_title)}.')
